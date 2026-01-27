@@ -49,13 +49,13 @@ const Products = () => {
             { name: 'Safflower Oil', telugu: 'కుసుము నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Safflower Oil.jpg', quantities: ['1 Litre', '500 ml'] },
         ],
         dryfruits: [
-            { name: 'Cashew JH', telugu: 'జీడి పప్పు (JH)', category: 'Premium', image: '/Dry Fruits/Cashew Nutsimage.png', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Cashew JH', telugu: 'జీడి పప్పు (JH)', category: 'Premium', image: '/Dry Fruits/Cashew_JH.png', quantities: ['1 kg', '500 g', '250 g'] },
             { name: 'Cashew Jumbo', telugu: 'జీడి పప్పు (Jumbo)', category: 'Premium', image: '/Dry Fruits/Cashew Nutsimage.png', quantities: ['1 kg', '500 g', '250 g'] },
             { name: 'Anjeer', telugu: 'అంజూరం', category: 'Premium', image: '/Dry Fruits/Dry Figs.jpg', quantities: ['1 kg', '500 g', '250 g'] },
-            { name: 'Badam', telugu: 'బాదం పప్పు', category: 'Premium', image: '/Dry Fruits/Almonds.png', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Badam', telugu: 'బాదం పప్పు', category: 'Premium', image: '/Dry Fruits/Almond.png', quantities: ['1 kg', '500 g', '250 g'] },
             { name: 'Kismiss', telugu: 'ఎండు ద్రాక్ష', category: 'Premium', image: '/Dry Fruits/Golden Raisins.jpg', quantities: ['1 kg', '500 g', '250 g'] },
             { name: 'Black Kismiss', telugu: 'నల్ల ద్రాక్ష', category: 'Premium', image: '/Dry Fruits/Black Raisins.jpg', quantities: ['1 kg', '500 g', '250 g'] },
-            { name: 'Pumpkin Seeds', telugu: 'గుమ్మడి విత్తనాలు', category: 'Seeds', image: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Pumpkin_seeds.jpg', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Pumpkin Seeds', telugu: 'గుమ్మడి విత్తనాలు', category: 'Seeds', image: '/Seeds/Pumpkin_Seeds.jpg', quantities: ['1 kg', '500 g', '250 g'] },
             { name: 'Sunflower Seeds', telugu: 'పొద్దుతిరుగుడు విత్తనాలు', category: 'Seeds', image: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Sunflower_seeds.jpg', quantities: ['1 kg', '500 g', '250 g'] },
             { name: 'Flax Seeds', telugu: 'అవిసె గింజలు', category: 'Seeds', image: 'https://upload.wikimedia.org/wikipedia/commons/5/56/Brown_Flax_Seeds.jpg', quantities: ['1 kg', '500 g', '250 g'] },
             { name: 'Chia Seeds', telugu: 'చియా విత్తనాలు', category: 'Seeds', image: '/Dry Fruits/7c5d18a8086fb13cbd8f233151700681.jpg', quantities: ['1 kg', '500 g', '250 g'] },
@@ -71,6 +71,11 @@ const Products = () => {
             { name: 'Fenugreek Seeds', telugu: 'మెంతులు', category: 'Spice', image: '/Spices/Fenugreek Seeds.png', quantities: ['250 g', '500 g', '100 g'] },
             { name: 'Cardamom', telugu: 'ఏలకులు', category: 'Spice', image: '/Spices/Cardamom.png', quantities: ['250 g', '500 g', '100 g'] },
             { name: 'Cinnamon', telugu: 'దాల్చిన చెక్క', category: 'Spice', image: '/Spices/Cinnamon.png', quantities: ['250 g', '500 g', '100 g'] },
+            { name: 'Cloves', telugu: 'లవంగాలు', category: 'Spice', image: '/Spices/Cloves.png', quantities: ['100 g', '50 g'] },
+            { name: 'Star Anise', telugu: 'అనాస పువ్వు', category: 'Spice', image: '/Spices/StarAnise.png', quantities: ['100 g', '50 g'] },
+            { name: 'Mace', telugu: 'జాపత్రి', category: 'Spice', image: '/Spices/Mace.png', quantities: ['50 g', '25 g'] },
+            { name: 'Bay Leaves', telugu: 'బిర్యానీ ఆకు', category: 'Spice', image: '/Spices/BayLeaves.png', quantities: ['50 g', '25 g'] },
+            { name: 'Kasthuri Methi', telugu: 'కస్తూరి మేతి', category: 'Spice', image: '/Spices/KasthuriMethi.png', quantities: ['100 g', '50 g'] },
         ],
     };
 
