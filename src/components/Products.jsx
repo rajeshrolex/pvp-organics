@@ -38,37 +38,39 @@ const Products = () => {
 
     const products = {
         oils: [
-            { name: 'Black Sesame Oil', telugu: 'నల్ల నువ్వుల నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Black Sesame Oil.jpg' },
-            { name: 'Coconut Oil', telugu: 'కొబ్బరి నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/coconut oil.jpg' },
-            { name: 'Castor Oil', telugu: 'ఆముదం నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Castor Oil.jpg' },
-            { name: 'Ground Nut Oil', telugu: 'వేరు శెనగ నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Ground Nut Oil.jpg' },
-            { name: 'Mustard Oil', telugu: 'ఆవ నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/modified.jpg' },
-            { name: 'Sesame Oil', telugu: 'నువ్వుల నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Sesame Oil.jpg' },
-            { name: 'Sunflower Oil', telugu: 'పొద్దు తిరుగుడు నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Sunflower Oil.jpg' },
-            { name: 'Almond Oil', telugu: 'బాదం నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Almond Oil.jpg' },
-            { name: 'Safflower Oil', telugu: 'కుసుము నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Safflower Oil.jpg' },
+            { name: 'Black Sesame Oil', telugu: 'నల్ల నువ్వుల నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Black Sesame Oil.jpg', quantities: ['1 Litre', '500 ml'] },
+            { name: 'Coconut Oil', telugu: 'కొబ్బరి నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/coconut oil.jpg', quantities: ['1 Litre', '500 ml'] },
+            { name: 'Castor Oil', telugu: 'ఆముదం నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Castor Oil.jpg', quantities: ['1 Litre', '500 ml'] },
+            { name: 'Ground Nut Oil', telugu: 'వేరు శెనగ నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Ground Nut Oil.jpg', quantities: ['1 Litre', '500 ml'] },
+            { name: 'Mustard Oil', telugu: 'ఆవ నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/modified.jpg', quantities: ['1 Litre', '500 ml'] },
+            { name: 'Sesame Oil', telugu: 'నువ్వుల నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Sesame Oil.jpg', quantities: ['1 Litre', '500 ml'] },
+            { name: 'Sunflower Oil', telugu: 'పొద్దు తిరుగుడు నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Sunflower Oil.jpg', quantities: ['1 Litre', '500 ml'] },
+            { name: 'Almond Oil', telugu: 'బాదం నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Almond Oil.jpg', quantities: ['1 Litre', '500 ml'] },
+            { name: 'Safflower Oil', telugu: 'కుసుము నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Safflower Oil.jpg', quantities: ['1 Litre', '500 ml'] },
         ],
         dryfruits: [
-            { name: 'Almonds', telugu: 'బాదం పప్పు', category: 'Premium', image: '/Dry Fruits/Almonds.png' },
-            { name: 'Cashew Nuts', telugu: 'జీడి పప్పు', category: 'Premium', image: '/Dry Fruits/Cashew Nutsimage.png' },
-            { name: 'Dates Black', telugu: 'ఎండు ఖర్జూరం', category: 'Premium', image: '/Dry Fruits/Dates Black.png' },
-            { name: 'Dates White', telugu: 'ఎండు ఖర్జూరం', category: 'Premium', image: '/Dry Fruits/Dates Black.png' },
-            { name: 'Walnuts', telugu: 'వాల్ట్', category: 'Premium', image: '/Dry Fruits/Walnuts.jpg' },
-            { name: 'Black Raisins', telugu: 'నల్ల ద్రాక్ష', category: 'Premium', image: '/Dry Fruits/Black Raisins.jpg' },
-            { name: 'Golden Raisins', telugu: 'ఎండు ద్రాక్ష', category: 'Premium', image: '/Dry Fruits/Golden Raisins.jpg' },
-            { name: 'Dry Apricots', telugu: 'బొండ నేరేడు పండు', category: 'Premium', image: '/Dry Fruits/Dry Apricots.jpg' },
-            { name: 'Dry Figs', telugu: 'అంజూరం', category: 'Premium', image: '/Dry Fruits/Dry Figs.jpg' },
+            { name: 'Cashew JH', telugu: 'జీడి పప్పు (JH)', category: 'Premium', image: '/Dry Fruits/Cashew Nutsimage.png', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Cashew Jumbo', telugu: 'జీడి పప్పు (Jumbo)', category: 'Premium', image: '/Dry Fruits/Cashew Nutsimage.png', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Anjeer', telugu: 'అంజూరం', category: 'Premium', image: '/Dry Fruits/Dry Figs.jpg', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Badam', telugu: 'బాదం పప్పు', category: 'Premium', image: '/Dry Fruits/Almonds.png', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Kismiss', telugu: 'ఎండు ద్రాక్ష', category: 'Premium', image: '/Dry Fruits/Golden Raisins.jpg', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Black Kismiss', telugu: 'నల్ల ద్రాక్ష', category: 'Premium', image: '/Dry Fruits/Black Raisins.jpg', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Pumpkin Seeds', telugu: 'గుమ్మడి విత్తనాలు', category: 'Seeds', image: 'https://upload.wikimedia.org/wikipedia/commons/e/e3/Pumpkin_seeds.jpg', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Sunflower Seeds', telugu: 'పొద్దుతిరుగుడు విత్తనాలు', category: 'Seeds', image: 'https://upload.wikimedia.org/wikipedia/commons/0/01/Sunflower_seeds.jpg', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Flax Seeds', telugu: 'అవిసె గింజలు', category: 'Seeds', image: 'https://upload.wikimedia.org/wikipedia/commons/5/56/Brown_Flax_Seeds.jpg', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Chia Seeds', telugu: 'చియా విత్తనాలు', category: 'Seeds', image: '/Dry Fruits/7c5d18a8086fb13cbd8f233151700681.jpg', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Honey', telugu: 'తేనె', category: 'Natural', image: '/oils.png', quantities: ['1 kg', '500 g', '250 g'] },
         ],
         spices: [
-            { name: 'Turmeric Powder', telugu: 'పసుపు', category: 'Spice', image: '/turmeric.jpg' },
-            { name: 'Red Chili Powder', telugu: 'మిరపకాయ పొడి', category: 'Spice', image: '/chili.jpg' },
-            { name: 'Coriander Seeds', telugu: 'ధనియాలు', category: 'Spice', image: '/coriander.jpg' },
-            { name: 'Cumin Seeds', telugu: 'జీలకర్ర', category: 'Spice', image: '/cumin.jpg' },
-            { name: 'Black Pepper', telugu: 'మిరియాలు', category: 'Spice', image: '/pepper.jpg' },
-            { name: 'Mustard Seeds', telugu: 'ఆవాలు', category: 'Spice', image: '/mustard-seeds.jpg' },
-            { name: 'Fenugreek Seeds', telugu: 'మెంతులు', category: 'Spice', image: '/Spices/Fenugreek Seeds.png' },
-            { name: 'Cardamom', telugu: 'ఏలకులు', category: 'Spice', image: '/Spices/Cardamom.png' },
-            { name: 'Cinnamon', telugu: 'దాల్చిన చెక్క', category: 'Spice', image: '/Spices/Cinnamon.png' },
+            { name: 'Turmeric Powder', telugu: 'పసుపు', category: 'Spice', image: '/turmeric.jpg', quantities: ['250 g', '500 g', '100 g'] },
+            { name: 'Red Chili Powder', telugu: 'మిరపకాయ పొడి', category: 'Spice', image: '/chili.jpg', quantities: ['250 g', '500 g', '100 g'] },
+            { name: 'Coriander Seeds', telugu: 'ధనియాలు', category: 'Spice', image: '/coriander.jpg', quantities: ['250 g', '500 g', '100 g'] },
+            { name: 'Cumin Seeds', telugu: 'జీలకర్ర', category: 'Spice', image: '/cumin.jpg', quantities: ['250 g', '500 g', '100 g'] },
+            { name: 'Black Pepper', telugu: 'మిరియాలు', category: 'Spice', image: '/pepper.jpg', quantities: ['250 g', '500 g', '100 g'] },
+            { name: 'Mustard Seeds', telugu: 'ఆవాలు', category: 'Spice', image: '/mustard-seeds.jpg', quantities: ['250 g', '500 g', '100 g'] },
+            { name: 'Fenugreek Seeds', telugu: 'మెంతులు', category: 'Spice', image: '/Spices/Fenugreek Seeds.png', quantities: ['250 g', '500 g', '100 g'] },
+            { name: 'Cardamom', telugu: 'ఏలకులు', category: 'Spice', image: '/Spices/Cardamom.png', quantities: ['250 g', '500 g', '100 g'] },
+            { name: 'Cinnamon', telugu: 'దాల్చిన చెక్క', category: 'Spice', image: '/Spices/Cinnamon.png', quantities: ['250 g', '500 g', '100 g'] },
         ],
     };
 
@@ -147,6 +149,7 @@ const Products = () => {
                                 telugu={product.telugu}
                                 category={product.category}
                                 image={product.image || categories.find(c => c.id === activeTab)?.image}
+                                quantities={product.quantities}
                             />
                         </div>
                     ))}

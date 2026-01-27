@@ -46,7 +46,7 @@ const Cart = () => {
                     ) : (
                         <div className="space-y-4">
                             {cart.map((item) => (
-                                <div key={item.name} className="bg-gray-50 rounded-lg p-3 flex gap-3">
+                                <div key={item.uniqueId || item.name} className="bg-gray-50 rounded-lg p-3 flex gap-3">
                                     {/* Product Image */}
                                     <div className="w-20 h-20 rounded-lg overflow-hidden bg-white flex-shrink-0">
                                         <img
@@ -61,14 +61,21 @@ const Cart = () => {
                                         <h3 className="font-bold text-primary-navy text-sm mb-1 truncate">
                                             {item.name}
                                         </h3>
-                                        {item.telugu && (
-                                            <p className="text-xs text-gray-600 mb-2">{item.telugu}</p>
-                                        )}
+                                        <div className="flex flex-col gap-0.5 mb-2">
+                                            {item.telugu && (
+                                                <p className="text-xs text-gray-600">{item.telugu}</p>
+                                            )}
+                                            {item.size && item.size !== 'Standard' && (
+                                                <p className="text-xs font-semibold text-primary-gold bg-primary-gold/10 inline-block px-1.5 py-0.5 rounded w-fit">
+                                                    {item.size}
+                                                </p>
+                                            )}
+                                        </div>
 
                                         {/* Quantity Controls */}
                                         <div className="flex items-center gap-2">
                                             <button
-                                                onClick={() => updateQuantity(item.name, item.quantity - 1)}
+                                                onClick={() => updateQuantity(item.uniqueId, item.quantity - 1)}
                                                 className="w-7 h-7 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors"
                                             >
                                                 <Minus size={14} />
@@ -77,13 +84,13 @@ const Cart = () => {
                                                 {item.quantity}
                                             </span>
                                             <button
-                                                onClick={() => updateQuantity(item.name, item.quantity + 1)}
+                                                onClick={() => updateQuantity(item.uniqueId, item.quantity + 1)}
                                                 className="w-7 h-7 rounded-full bg-white border border-gray-300 flex items-center justify-center hover:bg-gray-100 transition-colors"
                                             >
                                                 <Plus size={14} />
                                             </button>
                                             <button
-                                                onClick={() => removeFromCart(item.name)}
+                                                onClick={() => removeFromCart(item.uniqueId)}
                                                 className="ml-auto text-red-500 hover:text-red-700 p-1 transition-colors"
                                                 title="Remove from cart"
                                             >

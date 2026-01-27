@@ -33,35 +33,37 @@ export const CartProvider = ({ children }) => {
 
     const addToCart = (product) => {
         setCart(prevCart => {
-            const existingItem = prevCart.find(item => item.name === product.name);
+            const size = product.size || 'Standard';
+            const uniqueId = `${product.name}-${size}`;
+            const existingItem = prevCart.find(item => item.uniqueId === uniqueId);
 
             if (existingItem) {
                 // Increment quantity if item already exists
                 return prevCart.map(item =>
-                    item.name === product.name
+                    item.uniqueId === uniqueId
                         ? { ...item, quantity: item.quantity + 1 }
                         : item
                 );
             } else {
                 // Add new item with quantity 1
-                return [...prevCart, { ...product, quantity: 1 }];
+                return [...prevCart, { ...product, size, uniqueId, quantity: 1 }];
             }
         });
     };
 
-    const removeFromCart = (productName) => {
-        setCart(prevCart => prevCart.filter(item => item.name !== productName));
+    const removeFromCart = (uniqueId) => {
+        setCart(prevCart => prevCart.filter(item => item.uniqueId !== uniqueId));
     };
 
-    const updateQuantity = (productName, newQuantity) => {
+    const updateQuantity = (uniqueId, newQuantity) => {
         if (newQuantity < 1) {
-            removeFromCart(productName);
+            removeFromCart(uniqueId);
             return;
         }
 
         setCart(prevCart =>
             prevCart.map(item =>
-                item.name === productName
+                item.uniqueId === uniqueId
                     ? { ...item, quantity: newQuantity }
                     : item
             )
@@ -89,6 +91,9 @@ export const CartProvider = ({ children }) => {
             message += `${index + 1}. ${item.name}`;
             if (item.telugu) {
                 message += ` (${item.telugu})`;
+            }
+            if (item.size && item.size !== 'Standard') {
+                message += ` - ${item.size}`;
             }
             message += ` - Qty: ${item.quantity}%0A`;
         });

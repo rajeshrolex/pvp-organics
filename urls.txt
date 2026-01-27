@@ -1,0 +1,4 @@
+Pumpkin_seeds.jpg:::https://upload.wikimedia.org/wikipedia/commons/e/e3/Pumpkin_seeds.jpg
+Sunflower_seeds.jpg:::https://upload.wikimedia.org/wikipedia/commons/0/01/Sunflower_seeds.jpg
+Brown_Flax_Seeds.jpg:::https://upload.wikimedia.org/wikipedia/commons/5/56/Brown_Flax_Seeds.jpg
+Chia_seeds_-_Salvia_hispanica.jpg:::https://upload.wikimedia.org/wikipedia/commons/4/46/Chia_seeds_-_Salvia_hispanica.jpg
