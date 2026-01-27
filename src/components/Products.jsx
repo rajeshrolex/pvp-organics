@@ -1,0 +1,174 @@
+import { useState, useEffect, useRef } from 'react';
+import ProductCard from './ProductCard';
+import { Droplet, Apple, Sparkles } from 'lucide-react';
+
+const Products = () => {
+    const [activeTab, setActiveTab] = useState('oils');
+    const sectionRef = useRef(null);
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
+                            setTimeout(() => {
+                                el.style.opacity = '1';
+                                el.style.transform = 'translateY(0)';
+                            }, index * 50);
+                        });
+                    }
+                });
+            },
+            { threshold: 0.1 }
+        );
+
+        if (sectionRef.current) {
+            observer.observe(sectionRef.current);
+        }
+
+        return () => observer.disconnect();
+    }, [activeTab]);
+
+    const categories = [
+        { id: 'oils', name: 'Wood Pressed Oils', icon: <Droplet size={20} />, image: '/oils.png' },
+        { id: 'dryfruits', name: 'Dry Fruits', icon: <Apple size={20} />, image: '/dryfruits.png' },
+        { id: 'spices', name: 'Spices', icon: <Sparkles size={20} />, image: '/spices.png' },
+    ];
+
+    const products = {
+        oils: [
+            { name: 'Black Sesame Oil', telugu: 'నల్ల నువ్వుల నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Black Sesame Oil.jpg' },
+            { name: 'Coconut Oil', telugu: 'కొబ్బరి నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/coconut oil.jpg' },
+            { name: 'Castor Oil', telugu: 'ఆముదం నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Castor Oil.jpg' },
+            { name: 'Ground Nut Oil', telugu: 'వేరు శెనగ నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Ground Nut Oil.jpg' },
+            { name: 'Mustard Oil', telugu: 'ఆవ నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/modified.jpg' },
+            { name: 'Sesame Oil', telugu: 'నువ్వుల నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Sesame Oil.jpg' },
+            { name: 'Sunflower Oil', telugu: 'పొద్దు తిరుగుడు నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Sunflower Oil.jpg' },
+            { name: 'Almond Oil', telugu: 'బాదం నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Almond Oil.jpg' },
+            { name: 'Safflower Oil', telugu: 'కుసుము నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Safflower Oil.jpg' },
+        ],
+        dryfruits: [
+            { name: 'Almonds', telugu: 'బాదం పప్పు', category: 'Premium', image: '/Dry Fruits/Almonds.png' },
+            { name: 'Cashew Nuts', telugu: 'జీడి పప్పు', category: 'Premium', image: '/Dry Fruits/Cashew Nutsimage.png' },
+            { name: 'Dates Black', telugu: 'ఎండు ఖర్జూరం', category: 'Premium', image: '/Dry Fruits/Dates Black.png' },
+            { name: 'Dates White', telugu: 'ఎండు ఖర్జూరం', category: 'Premium', image: '/Dry Fruits/Dates Black.png' },
+            { name: 'Walnuts', telugu: 'వాల్ట్', category: 'Premium', image: '/Dry Fruits/Walnuts.jpg' },
+            { name: 'Black Raisins', telugu: 'నల్ల ద్రాక్ష', category: 'Premium', image: '/Dry Fruits/Black Raisins.jpg' },
+            { name: 'Golden Raisins', telugu: 'ఎండు ద్రాక్ష', category: 'Premium', image: '/Dry Fruits/Golden Raisins.jpg' },
+            { name: 'Dry Apricots', telugu: 'బొండ నేరేడు పండు', category: 'Premium', image: '/Dry Fruits/Dry Apricots.jpg' },
+            { name: 'Dry Figs', telugu: 'అంజూరం', category: 'Premium', image: '/Dry Fruits/Dry Figs.jpg' },
+        ],
+        spices: [
+            { name: 'Turmeric Powder', telugu: 'పసుపు', category: 'Spice', image: '/turmeric.jpg' },
+            { name: 'Red Chili Powder', telugu: 'మిరపకాయ పొడి', category: 'Spice', image: '/chili.jpg' },
+            { name: 'Coriander Seeds', telugu: 'ధనియాలు', category: 'Spice', image: '/coriander.jpg' },
+            { name: 'Cumin Seeds', telugu: 'జీలకర్ర', category: 'Spice', image: '/cumin.jpg' },
+            { name: 'Black Pepper', telugu: 'మిరియాలు', category: 'Spice', image: '/pepper.jpg' },
+            { name: 'Mustard Seeds', telugu: 'ఆవాలు', category: 'Spice', image: '/mustard-seeds.jpg' },
+            { name: 'Fenugreek Seeds', telugu: 'మెంతులు', category: 'Spice', image: '/Spices/Fenugreek Seeds.png' },
+            { name: 'Cardamom', telugu: 'ఏలకులు', category: 'Spice', image: '/Spices/Cardamom.png' },
+            { name: 'Cinnamon', telugu: 'దాల్చిన చెక్క', category: 'Spice', image: '/Spices/Cinnamon.png' },
+        ],
+    };
+
+    return (
+        <section
+            id="products"
+            ref={sectionRef}
+            className="section-padding bg-gradient-to-br from-primary-navy via-primary-dark to-primary-navy relative overflow-hidden"
+        >
+            {/* Background Decoration */}
+            <div className="absolute top-0 left-0 w-96 h-96 bg-primary-gold/10 rounded-full blur-3xl"></div>
+            <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-orange/10 rounded-full blur-3xl"></div>
+
+            <div className="container-custom relative z-10">
+                {/* Section Header */}
+                <div className="text-center mb-12 animate-on-scroll" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'all 0.8s ease-out' }}>
+                    <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                        Our Premium <span className="text-primary-gold">Products</span>
+                    </h2>
+                    <div className="w-24 h-1 bg-gradient-gold mx-auto mb-6"></div>
+                    <p className="text-lg text-accent-light max-w-2xl mx-auto">
+                        Handpicked selection of the finest organic products for your health and wellness
+                    </p>
+                </div>
+
+                {/* Category Tabs */}
+                <div className="flex flex-wrap justify-center gap-4 mb-12 animate-on-scroll" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'all 0.8s ease-out' }}>
+                    {categories.map((category) => (
+                        <button
+                            key={category.id}
+                            onClick={() => setActiveTab(category.id)}
+                            className={`flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all duration-300 ${activeTab === category.id
+                                ? 'bg-gradient-gold text-white shadow-lg scale-105'
+                                : 'glass text-white hover:bg-white/20'
+                                }`}
+                        >
+                            {category.icon}
+                            <span>{category.name}</span>
+                        </button>
+                    ))}
+                </div>
+
+                {/* Category Hero Image */}
+                <div className="mb-12 animate-on-scroll" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'all 0.8s ease-out' }}>
+                    <div className="relative h-64 rounded-3xl overflow-hidden glass">
+                        <img
+                            src={categories.find(c => c.id === activeTab)?.image}
+                            alt={categories.find(c => c.id === activeTab)?.name}
+                            className="w-full h-full object-cover"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-primary-navy/80 to-transparent flex items-end">
+                            <div className="p-8">
+                                <h3 className="text-3xl font-bold text-white mb-2">
+                                    {categories.find(c => c.id === activeTab)?.name}
+                                </h3>
+                                <p className="text-accent-light">
+                                    {activeTab === 'oils' && 'Traditional wood-pressed oils for authentic nutrition'}
+                                    {activeTab === 'dryfruits' && 'Premium quality dry fruits handpicked for you'}
+                                    {activeTab === 'spices' && 'Aromatic spices to elevate your culinary experience'}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Products Grid */}
+                <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    {products[activeTab].map((product, index) => (
+                        <div
+                            key={index}
+                            className="animate-on-scroll"
+                            style={{ opacity: 0, transform: 'translateY(30px)', transition: 'all 0.8s ease-out' }}
+                        >
+                            <ProductCard
+                                name={product.name}
+                                telugu={product.telugu}
+                                category={product.category}
+                                image={product.image || categories.find(c => c.id === activeTab)?.image}
+                            />
+                        </div>
+                    ))}
+                </div>
+
+                {/* CTA */}
+                <div className="text-center mt-16 animate-on-scroll" style={{ opacity: 0, transform: 'translateY(30px)', transition: 'all 0.8s ease-out' }}>
+                    <p className="text-white text-lg mb-6">
+                        Can't find what you're looking for? Get in touch with us!
+                    </p>
+                    <a
+                        href="https://wa.me/917013490164?text=Hi,%20I'd%20like%20to%20know%20more%20about%20your%20products"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-primary inline-block"
+                    >
+                        Contact Us on WhatsApp
+                    </a>
+                </div>
+            </div>
+        </section>
+    );
+};
+
+export default Products;

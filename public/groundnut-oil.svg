@@ -1,0 +1,7 @@
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="600" height="400" fill="#f8fafc" />
+  <circle cx="300" cy="200" r="150" fill="#eab30820" />
+  <path d="M300 100 L340 140 L340 300 Q340 340 300 340 Q260 340 260 300 L260 140 Z" fill="#eab308" stroke="#334155" stroke-width="2"/>
+  <rect x="280" y="80" width="40" height="20" fill="#334155" />
+  <text x="300" y="380" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#334155" text-anchor="middle">Groundnut Oil</text>
+</svg>
