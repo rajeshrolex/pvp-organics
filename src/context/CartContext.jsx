@@ -101,7 +101,7 @@ export const CartProvider = ({ children }) => {
         message += `%0A*Total Items: ${getTotalItems()}*%0A%0A`;
         message += 'Please confirm availability and pricing. Thank you!';
 
-        window.open(`https://wa.me/917013490164?text=${message}`, '_blank');
+        window.open(`https://wa.me/916281527429?text=${message}`, '_blank');
     };
 
     const value = {

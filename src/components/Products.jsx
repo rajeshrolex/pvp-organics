@@ -50,7 +50,7 @@ const Products = () => {
         ],
         dryfruits: [
             { name: 'Cashew JH', telugu: 'జీడి పప్పు (JH)', category: 'Premium', image: '/Dry Fruits/Cashew_JH.png', quantities: ['1 kg', '500 g', '250 g'] },
-            { name: 'Cashew Jumbo', telugu: 'జీడి పప్పు (Jumbo)', category: 'Premium', image: '/Dry Fruits/Cashew Nutsimage.png', quantities: ['1 kg', '500 g', '250 g'] },
+            { name: 'Cashew Jumbo', telugu: 'జీడి పప్పు (Jumbo)', category: 'Premium', image: '/Dry Fruits/Cashew Jumbo.jpg', quantities: ['1 kg', '500 g', '250 g'] },
             { name: 'Anjeer', telugu: 'అంజూరం', category: 'Premium', image: '/Dry Fruits/Dry Figs.jpg', quantities: ['1 kg', '500 g', '250 g'] },
             { name: 'Badam', telugu: 'బాదం పప్పు', category: 'Premium', image: '/Dry Fruits/Almond.png', quantities: ['1 kg', '500 g', '250 g'] },
             { name: 'Kismiss', telugu: 'ఎండు ద్రాక్ష', category: 'Premium', image: '/Dry Fruits/Golden Raisins.jpg', quantities: ['1 kg', '500 g', '250 g'] },
@@ -166,7 +166,7 @@ const Products = () => {
                         Can't find what you're looking for? Get in touch with us!
                     </p>
                     <a
-                        href="https://wa.me/917013490164?text=Hi,%20I'd%20like%20to%20know%20more%20about%20your%20products"
+                        href="https://wa.me/916281527429?text=Hi,%20I'd%20like%20to%20know%20more%20about%20your%20products"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-primary inline-block"

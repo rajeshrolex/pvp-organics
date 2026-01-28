@@ -33,7 +33,7 @@ const Contact = () => {
             icon: <Phone className="text-primary-gold" size={24} />,
             title: 'Phone',
             details: [
-                { label: '7013490164', link: 'tel:+917013490164' },
+                { label: '+91 62815 27429', link: 'tel:+916281527429' },
                 { label: '9493709757', link: 'tel:+919493709757' },
             ],
         },
@@ -197,7 +197,7 @@ const Contact = () => {
                         Order now and get premium quality organic products delivered to your doorstep
                     </p>
                     <a
-                        href="https://wa.me/917013490164?text=Hi,%20I'd%20like%20to%20place%20an%20order"
+                        href="https://wa.me/916281527429?text=Hi,%20I'd%20like%20to%20place%20an%20order"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-primary inline-block"
