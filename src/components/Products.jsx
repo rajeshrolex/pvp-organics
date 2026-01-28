@@ -47,6 +47,7 @@ const Products = () => {
             { name: 'Sunflower Oil', telugu: 'పొద్దు తిరుగుడు నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Sunflower Oil.jpg', quantities: ['1 Litre', '500 ml'] },
             { name: 'Almond Oil', telugu: 'బాదం నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Almond Oil.jpg', quantities: ['1 Litre', '500 ml'] },
             { name: 'Safflower Oil', telugu: 'కుసుము నూనె', category: 'Wood Pressed', image: '/Wood Pressed Oils/Safflower Oil.jpg', quantities: ['1 Litre', '500 ml'] },
+            { name: 'Wooden Cold pressed oils', telugu: 'చెక్క గానుగ నూనెలు', category: 'Wood Pressed', image: '/oils.png', quantities: ['1 Litre', '500 ml'] },
         ],
         dryfruits: [
             { name: 'Cashew JH', telugu: 'జీడి పప్పు (JH)', category: 'Premium', image: '/Dry Fruits/Cashew_JH.png', quantities: ['1 kg', '500 g', '250 g'] },
@@ -166,7 +167,7 @@ const Products = () => {
                         Can't find what you're looking for? Get in touch with us!
                     </p>
                     <a
-                        href="https://wa.me/916281527429?text=Hi,%20I'd%20like%20to%20know%20more%20about%20your%20products"
+                        href="https://wa.me/917013490164?text=Hi,%20I'd%20like%20to%20know%20more%20about%20your%20products"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-primary inline-block"

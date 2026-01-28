@@ -81,7 +81,7 @@ const Navbar = () => {
                             )}
                         </button>
                         <a
-                            href="https://wa.me/916281527429"
+                            href="https://wa.me/917013490164"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-primary text-sm !py-2.5 !px-6"
@@ -131,7 +131,7 @@ const Navbar = () => {
                             </a>
                         ))}
                         <a
-                            href="https://wa.me/916281527429"
+                            href="https://wa.me/917013490164"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="btn-primary w-full mt-4 text-center block"

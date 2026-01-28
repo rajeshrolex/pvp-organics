@@ -14,7 +14,7 @@ const WhatsAppButton = () => {
 
     const handleClick = () => {
         window.open(
-            'https://wa.me/916281527429?text=Hi,%20I\'d%20like%20to%20know%20more%20about%20PVP%20Organics%20products',
+            'https://wa.me/917013490164?text=Hi,%20I\'d%20like%20to%20know%20more%20about%20PVP%20Organics%20products',
             '_blank'
         );
     };

@@ -7,7 +7,7 @@ const Hero = () => {
     const slides = [
         {
             image: '/oils.png',
-            title: 'Wood Pressed Oils',
+            title: 'Wooden Cold pressed oils',
             subtitle: 'Traditional & Healthy',
             color: 'from-yellow-900/80 to-yellow-800/80'
         },
