@@ -31,7 +31,7 @@ const Products = () => {
     }, [activeTab]);
 
     const categories = [
-        { id: 'oils', name: 'Wood Pressed Oils', icon: <Droplet size={20} />, image: '/oils.png' },
+        { id: 'oils', name: 'Wooden Cold pressed oils', icon: <Droplet size={20} />, image: '/oils.png' },
         { id: 'dryfruits', name: 'Dry Fruits', icon: <Apple size={20} />, image: '/dryfruits.png' },
         { id: 'spices', name: 'Spices', icon: <Sparkles size={20} />, image: '/spices.png' },
     ];
